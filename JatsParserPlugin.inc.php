@@ -617,10 +617,9 @@ class JatsParserPlugin extends GenericPlugin {
 	 * use CitationStyleLanguagePlugin if set
 	 * use vancouver style otherwise
 	 */
-	function getCitationStyle(): string {
+	function getCitationStyle($context): string {
 
-		// $contextId = $context->getId();
-		$contextId = '1';
+		$contextId = $context->getId();
 
 		$citationStyle = $this->getSetting($contextId, 'citationStyle');
 
